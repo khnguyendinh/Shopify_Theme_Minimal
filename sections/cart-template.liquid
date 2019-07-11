@@ -205,8 +205,8 @@
                   {%- endfor -%}
                 </div>
               {%- endif -%}
-              <span class="cart__subtotal-title">{{ 'cart.general.subtotal' | t }}</span>
-              <span class="h5 cart__subtotal-price">{{ cart.total_price | money }}</span>
+              <span class="cart__subtotal-title"><span id="revy-cart-subtotal-label">{{ 'cart.general.subtotal' | t }}</span></span>
+              <span class="h5 cart__subtotal-price"><span id="bk-cart-subtotal-price"><span id="revy-cart-subtotal-price">{{ cart.total_price | money }}</span></span></span>
             </p>
 
             {%- capture taxes_shipping_checkout -%}

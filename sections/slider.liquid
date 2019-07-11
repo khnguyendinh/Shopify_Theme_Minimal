@@ -7,7 +7,7 @@
 
 {%- case section.settings.slider_height -%}
   {%- when 'small' -%}
-    {%- assign slider_desktop_height = '400px' -%}
+   {%- assign slider_desktop_height = '400px' -%}
     {%- assign slider_mobile_height = '250px' -%}
   {%- when 'medium' -%}
     {%- assign slider_desktop_height = '500px' -%}
@@ -89,6 +89,9 @@
 
           <li id="slide--{{ block.id }}" class="slides__slide slide-hide" data-slider-item data-flexslider-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
             {%- if block.settings.image != blank -%}
+            {%- if block.settings.image_link != blank -%}
+            <a class="slide__link" href="{{ block.settings.image_link }}"></a>
+            {%- endif -%}
               <img class="slides__image lazyload{% unless forloop.first == true %} lazypreload{% endunless %}"
                     src="{{ block.settings.image | img_url: '300x300' }}"
                     data-src="{{ img_url }}"
@@ -488,7 +491,12 @@
             "pt-BR": "Imagem",
             "zh-CN": "图片",
             "zh-TW": "圖片"
-          }
+          }			
+        },
+        {
+        "type": "url",
+        "id": "image_link",
+        "label": "Image Link"
         },
         {
           "type": "select",

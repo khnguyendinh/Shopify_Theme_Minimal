@@ -214,7 +214,10 @@
               {{ form | payment_button }}
             {% endif %}
           {% endform %}
-
+           {% if product.metafields.sold.sold_out_cu %}
+          <h2 style="margin: 0px; line-height: 1.4; color: #ff0000; font-family: Arial; font-size: 14pt; border: 0px; padding: 0px;" class="h4">{{product.metafields.sold.sold_out_cu}} Solds in 24 hours</h2>
+			<br>
+          {% endif %}
           {% unless section.settings.show_extra_tab == false or pages[section.settings.extra_tab_content] == empty %}
             <div class="tabs">
               <ul class="tab-switch__nav">
