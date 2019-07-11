@@ -207,7 +207,7 @@ $max: max-width;
 }
 
 
-  $siteWidth: 1030px;
+  $siteWidth: 1340px;
 
 
 $gutter: 30px;
@@ -222,6 +222,8 @@ $small: 480px;
 $medium: 768px;
 $large: 769px;
 
+$wide: 1250px;
+
 
 $viewportIncrement: 1px;
 $postSmall: $small + $viewportIncrement;
@@ -234,16 +236,17 @@ $breakpoints: (
   'medium' '(min-width: #{$postSmall}) and (max-width: #{$medium})',
   'medium-down' '(max-width: #{$medium})',
   
-  'large' '(min-width: #{$large})',
+  'large' '(min-width: #{$large}) and (max-width: #{$wide})',
   
-  'post-large' '(min-width: #{$large})'
+  'post-large' '(min-width: #{$large})',
+  'wide' '(min-width: #{$wide})'
 );
 $breakpoint-has-widths: ('small', 'medium', 'medium-down', 'large', 'post-large', 'wide');
 $breakpoint-has-push:  ('medium', 'medium-down', 'large', 'post-large', 'wide');
 $breakpoint-has-pull:  ('medium', 'medium-down', 'large', 'post-large', 'wide');
 
 /*================ Color variables ================*/
-$colorPrimary: #59756f;
+$colorPrimary: #6b1e72;
 
 // Button colors
 $colorBtnPrimary: $colorPrimary;
@@ -268,10 +271,10 @@ $colorTopBarText: #000000;
 $colorBody: #ffffff;
 $colorHeader: transparent;
 $colorTopBar: #cbd5cc;
-$passwordBgImage: '//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/password-page-background.jpg?1005';
+$passwordBgImage: '//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/password-page-background.jpg?957';
 
 // Border colors
-$colorBorder: #ebebeb;
+$colorBorder: rgba(0,0,0,0);
 
 // Nav and dropdown link background
 $colorNavText: #000000;
@@ -1482,7 +1485,7 @@ select {
           appearance: none;
   background-position: right center;
   background: {
-    image: url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/ico-select.svg?1005');
+    image: url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/ico-select.svg?957');
     repeat: no-repeat;
     position: right 10px center;
     color: #fff;
@@ -1668,11 +1671,11 @@ label.error {
 /*================ Partials | Icons ================*/
 @font-face {
   font-family: "icons";
-  src: url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/icons.eot?1005');
-  src: url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/icons.eot?1005#iefix') format("embedded-opentype"),
-    url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/icons.woff?1005') format("woff"),
-    url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/icons.ttf?1005') format("truetype"),
-    url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/3/assets/icons.svg?1005#timber-icons') format("svg");
+  src: url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/icons.eot?957');
+  src: url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/icons.eot?957#iefix') format("embedded-opentype"),
+    url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/icons.woff?957') format("woff"),
+    url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/icons.ttf?957') format("truetype"),
+    url('//cdn.shopify.com/s/files/1/0253/5895/8671/t/2/assets/icons.svg?957#timber-icons') format("svg");
   font-weight: normal;
   font-style: normal;
 }
