@@ -3,4 +3,13 @@
 {% endcomment %}
 
 {% section 'product-template' %}
-{% section 'product-recommendations' %}
+{% section 'product-recommendations' %}					
+<!-- RYVIU APP :: WIDGET -->
+<div class="lt-block-reviews"> 
+	<ryviu-widget  
+	    handle="{{product.handle}}"
+	    title_product="{{product.title}}"
+	    total_meta="{{ product.metafields.ryviu.r_count }}"
+		image_product="{{ product.featured_image.src | img_url: '800x' }}"></ryviu-widget>
+</div>
+<!-- / RYVIU APP -->

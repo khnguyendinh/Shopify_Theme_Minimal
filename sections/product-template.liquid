@@ -150,6 +150,14 @@
           <span class="h3" itemprop="brand">{{ product.vendor }}</span>
         {% endif %}
         <h1 itemprop="name">{{ product.title }}</h1>
+		<!-- RYVIU APP :: WIDGET-TOTAL -->
+		<div class="review-widget">
+		<ryviu-widget-total
+			reviews_data="{{product.metafields.ryviu.product_reviews_info  | escape  }}" 
+			product_id="{{product.id}}" handle="{{product.handle}}">
+		</ryviu-widget-total>
+		</div>
+		<!-- / RYVIU APP -->
 
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           {% assign variant = product.selected_or_first_available_variant %}

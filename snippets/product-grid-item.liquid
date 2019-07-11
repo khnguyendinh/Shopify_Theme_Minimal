@@ -67,6 +67,14 @@
       </span>
     </span>
     <p class="grid-link__title">{{ product_title }}</p>
+	<!-- RYVIU APP :: COLLECTION-WIDGET-TOTAL -->	
+	<div class="ryviu-collection">
+	<ryviu-widget-total collection=1 
+		 reviews_data="{{product.metafields.ryviu.product_reviews_info  | escape  }}" 
+		 product_id="{{product.id}}" handle="{{product.handle}}">
+	</ryviu-widget-total>
+	</div>  
+	<!-- RYVIU APP -->
     {% if section.settings.vendor_enable %}
       <p class="grid-link__title grid-link__vendor">{{ featured.vendor }}</p>
     {% endif %}
