@@ -7,7 +7,11 @@
   {% unless section.settings.title == blank %}
   <div class="section-header section-header--small">
     <h2 class="section-header__title">
+      {% comment %}
+      //khoand 13.7.2019 add url vào title của collection list
       {{ section.settings.title | escape }} 
+      {% endcomment %}
+      <a href="{{collections[section.settings.featured_collection].url | escape}}">{{ section.settings.title | escape }}</a>
     </h2>
   </div>
   {% endunless %}
